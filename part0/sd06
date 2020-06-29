@@ -1,0 +1,16 @@
+title 0.6
+
+note over browser
+browser gets user input to form and add it to notes then re-render them using redraw function
+then clear the input and send note data to server, also using event handle
+* prevent default action like redirect
+* send AJAX POST request
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+
+note over server
+server receive post request and add new note data to server side JSON notes data data.json
+end note 
+
+server->browser: HTTP status code 201 with message "note created"
